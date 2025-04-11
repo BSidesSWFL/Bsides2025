@@ -7,6 +7,7 @@ Welcome to the official website repository for the **BSides Southwest Florida 20
 ## 🧭 Project Goals
 
 This site will provide:
+
 - Event date and location info
 - Speaker and sponsor information
 - Call for papers and volunteer forms
@@ -19,24 +20,24 @@ This site will provide:
 
 1. **Clone the repository**
 
-    ```bash
-    git clone https://github.com/YOUR-USERNAME/bsides-swfl-2025.git
-    cd bsides-swfl-2025
-    ```
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/bsides-swfl-2025.git
+   cd bsides-swfl-2025
+   ```
 
 2. **Switch to the staging branch**
 
-    ```bash
-    git checkout staging
-    ```
+   ```bash
+   git checkout staging
+   ```
 
 3. **Open or edit `index.html`**
 
-    ```bash
-    code index.html
-    ```
+   ```bash
+   code index.html
+   ```
 
-    You can also use any editor of your choice.
+   You can also use any editor of your choice.
 
 ---
 
@@ -62,6 +63,7 @@ These rules ensure a safe, organized, and review-driven development process.
    Do not commit directly to `main`.
 
 2. **Suggested contributions:**
+
    - Layout and design updates (HTML/CSS/JS)
    - Components for speaker lists, schedules, forms, etc.
    - Branding updates (use the provided logo)
