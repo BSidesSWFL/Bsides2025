@@ -1,11 +1,10 @@
 import Link from "next/link"
-
-import { Facebook, Linkedin, Code } from "lucide-react"
-import { SiX, SiYoutube, SiDiscord, SiFacebook, SiFacebooklive } from '@icons-pack/react-simple-icons'
+import { Linkedin} from "lucide-react"
+import { SiX, SiYoutube, SiDiscord, SiFacebook } from '@icons-pack/react-simple-icons'
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-8">
+    <footer className="bg-black text-white py-8 h-[14.5vh]">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center gap-6 mb-6">
           <Link href="https://x.com/BSides_SWFL" className="hover:text-gray-300" aria-label="Twitter">
@@ -25,7 +24,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="text-center text-sm">
-          <p>© 2025 TechSides Conference. All rights reserved.</p>
+          <p>© 2025 BSides SWFL. All rights reserved.</p>
         </div>
       </div>
     </footer>

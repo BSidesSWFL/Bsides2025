@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/app/ui/button"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/app/ui/card"
+import Link from "next/link"
 
 export default function InfoCards() {
   return (
@@ -12,7 +13,7 @@ export default function InfoCards() {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700">
-              TechSides Conference is organized by volunteers and relies on funding from industry sponsors and
+              BSides SWFL is organized by volunteers and relies on funding from industry sponsors and
               donations.
             </p>
           </CardContent>
@@ -32,7 +33,9 @@ export default function InfoCards() {
             </p>
           </CardContent>
           <CardFooter>
+          <Link href="/tickets" className="bg-purple-800 hover:bg-purple-500 text-white">
             <Button className="bg-purple-800 hover:bg-purple-500 text-white">Buy Now!</Button>
+          </Link>
           </CardFooter>
         </Card>
 
@@ -42,10 +45,12 @@ export default function InfoCards() {
             <CardTitle className="text-2xl">We need your Help!</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-gray-700">Come join the fun and help us make 2025 the best TechSides Conference ever.</p>
+            <p className="text-gray-700">Come join the fun and help us make 2025 the best BSides SWFL ever.</p>
           </CardContent>
           <CardFooter>
-            <Button className="bg-purple-800 hover:bg-purple-500 text-white">Volunteer Information</Button>
+            <Link href="/volunteer" className="bg-purple-800 hover:bg-purple-500 text-white">
+              <Button className="bg-purple-800 hover:bg-purple-500 text-white">Volunteer Information</Button>
+            </Link>
           </CardFooter>
         </Card>
       </div>

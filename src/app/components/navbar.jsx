@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import Link from "next/link"
 import { Search, Menu, X } from "lucide-react"
 
-export default function Navbar() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -12,13 +12,13 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="dark:bg-black bg-white shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-30">
           {/* Logo and Brand */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="w-40 h-10 rounded-full bg-purple-700 flex items-center justify-center mr-3">
+              <div className="w-40 h-10 rounded-full bg-purple-700 flex items-center justify-center mr-3 opacity-80">
                 <img src="bsideslogo.png" alt="bsides swfl logo" />
               </div>
             </Link>
@@ -26,25 +26,25 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/schedule" className="text-gray-700 hover:text-purple-700">
+            <Link href="/schedule" className="text-black dark:text-white hover:text-purple-700">
               Schedule
             </Link>
-            <Link href="/speakers" className="text-gray-700 hover:text-purple-700">
+            <Link href="/speakers" className="text-black dark:text-white hover:text-purple-700">
               Speakers
             </Link>
-            <Link href="/events" className="text-gray-700 hover:text-purple-700">
+            <Link href="/events" className="text-black dark:text-white hover:text-purple-700">
               Events
             </Link>
-            <Link href="/workshops" className="text-gray-700 hover:text-purple-700">
+            <Link href="/workshops" className="text-black dark:text-white hover:text-purple-700">
               Workshops
             </Link>
-            <Link href="/volunteer" className="text-gray-700 hover:text-purple-700">
+            <Link href="/volunteer" className="text-black dark:text-white hover:text-purple-700">
               Volunteer
             </Link>
-            <Link href="/tickets" className="text-gray-700 hover:text-purple-700">
+            <Link href="/tickets" className="text-black dark:text-white hover:text-purple-700">
               Tickets
             </Link>
-            <button aria-label="Search" className="text-gray-700 hover:text-purple-700">
+            <button aria-label="Search" className="text-black dark:text-white hover:text-purple-700">
               <Search size={20} />
             </button>
           </div>
@@ -89,3 +89,5 @@ export default function Navbar() {
     </nav>
   )
 }
+
+export default Navbar
