@@ -36,7 +36,7 @@ export default function Volunteer() {
 
   return (
     <>
-      <main className="container mx-auto p-4">
+      <main className="container bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4 mt-4 text-center">Volunteer</h1>
         <form onSubmit={handleSubmit} className="max-w-xl mt-6 mx-auto my-6 mb-24 md:mb-28">
           <div className="mb-4">
@@ -50,7 +50,7 @@ export default function Volunteer() {
               value={formData.fullName}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div className="mb-4">
@@ -64,7 +64,7 @@ export default function Volunteer() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div className="mb-4">
@@ -77,7 +77,7 @@ export default function Volunteer() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div className="mb-4">
@@ -90,7 +90,7 @@ export default function Volunteer() {
               value={formData.interests}
               onChange={handleChange}
               rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div className="mb-4">
@@ -103,7 +103,7 @@ export default function Volunteer() {
               value={formData.availability}
               onChange={handleChange}
               rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full bg-white px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
             <button
               type="submit"

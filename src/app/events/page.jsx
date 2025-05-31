@@ -43,9 +43,9 @@ export default function Events() {
 
   return (
     <>
-      <main className="max-w-5xl mx-auto my-6 p-4">
+      <main className="max-w-5xl mx-auto my-6 p-4 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
         <h1 className="text-4xl font-bold mb-8 text-center">Events</h1>
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section className="grid grid-cols-1 text-center md:grid-cols-2 h-128 gap-6">
           <p>CTF Challenges and Villages Abound!</p>
           <p>Official Schedule Coming Soon!</p>
           {/* {events.map(event => (

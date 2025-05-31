@@ -7,7 +7,7 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-      <div className="bg-white p-4 rounded-lg mx-auto md:max-w-md md:w-1/2 md:h-[78vh] md:items-center md:flex-col items-center justify-center shadow-lg w-full h-3/4 relative">
+      <div className="bg-white p-4 rounded-lg mx-auto md:max-w-md md:w-1/2 md:h-[84vh] md:items-center md:flex-col items-center justify-center shadow-lg w-full h-3/4 relative">
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl"
           onClick={onClose}
@@ -15,7 +15,7 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
           &times;
         </button>
         <div className="w-full h-full flex flex-col md:flex-row md:items-center md:justify-between overflow-scroll">
-          <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 w-full max-w-2xl">
+          <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 rounded-lg shadow-lg p-6 md:p-8 w-full max-w-2xl">
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-2xl font-semibold text-gray-800">Call for Speakers</h1>
               <span className="bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-full">

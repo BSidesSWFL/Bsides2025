@@ -25,10 +25,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    
+
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-amber-50 via-orange-50 to-red-50`}>
         <Navbar />
         {children}
         <Footer />

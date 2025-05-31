@@ -1,5 +1,3 @@
-// ... existing code ...
-
 export default function Hero() {
   return (
     <div className="relative bg-gradient-to-r from-purple-800 via-purple-400 to-blue-500 py-24 md:py-32">
