@@ -27,8 +27,11 @@ export default function RootLayout({ children }) {
   return (
 
     <html lang="en">
+      <head>
+        <script src="https://js-na2.hsforms.net/forms/embed/242985282.js"></script>
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-purple-800 via-purple-400 to-blue-500`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-purple-800 via-purple-400 to-blue-500 h-full`}>
         <Navbar />
         {children}
         <Footer />

@@ -18,7 +18,7 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
           <div className="bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 rounded-lg shadow-lg p-6 md:p-8 w-full max-w-2xl">
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-2xl font-semibold text-teal-700">Call for Speakers</h1>
-              <span className="bg-green-100 text-teal-700 text-sm font-medium px-3 py-1 rounded-full">
+              <span className="bg-green-100 text-teal-700 text-sm w-auto font-medium px-3 py-1 rounded-full">
                 4 months left
               </span>
             </div>
