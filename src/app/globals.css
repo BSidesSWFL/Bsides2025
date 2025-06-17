@@ -266,3 +266,19 @@ html {
     url('/bsideslogo.png') repeat center/cover;
 }
 
+.bsides-gradient-text {
+    /* Define the linear gradient with colors sampled from the logo */
+    background: linear-gradient(to right, #6A2199, #AE4996, #0f6f66, #F2A600, #FCDD30);
+    /* Apply the background only to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Make the text color transparent so the background gradient shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+
+    /* Adjust font properties for better visibility of the gradient */
+    font-size: 2rem; /* Large font size for demonstration */
+    font-weight: 700; /* Bold font for better gradient display */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
