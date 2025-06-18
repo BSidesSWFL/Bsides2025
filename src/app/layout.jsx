@@ -1,0 +1,41 @@
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata = {
+  title: "BSides SWFL 2025- Get Your Tickets Now!",
+  description: "For the BSides SWFL 2025 cybersecurity conference.",
+  icons: {
+    icon: "icon.ico",
+    shortcut: "icon.ico",
+    apple: "icon.ico",
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+
+    <html lang="en">
+      <head>
+        <script src="https://js-na2.hsforms.net/forms/embed/242985282.js"></script>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-r from-purple-800 via-purple-400 to-blue-500 h-full`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}

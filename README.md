@@ -1,3 +1,9 @@
+[![Next](https://img.shields.io/badge/NextJS-v15.2.0-blue.svg?logo=next.js)](https://nextjs.org)
+[![React](https://img.shields.io/badge/React-v19-teal.svg?logo=react)](https://react.dev)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-v4-lightblue.svg?logo=tailwindcss)](https://nextjs.org)
+
+---
+
 # BSides SWFL 2025 Website
 
 Welcome to the official website repository for the **BSides Southwest Florida 2025** conference, taking place on **November 14–15, 2025**. This is a collaborative project led by FSW's Software Engineering Club and community volunteers. Our goal is to build a clean, accessible, and exciting web presence for BSides SWFL!
@@ -7,6 +13,7 @@ Welcome to the official website repository for the **BSides Southwest Florida 20
 ## 🧭 Project Goals
 
 This site will provide:
+
 - Event date and location info
 - Speaker and sponsor information
 - Call for papers and volunteer forms
@@ -19,24 +26,24 @@ This site will provide:
 
 1. **Clone the repository**
 
-    ```bash
-    git clone https://github.com/YOUR-USERNAME/bsides-swfl-2025.git
-    cd bsides-swfl-2025
-    ```
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/bsides-swfl-2025.git
+   cd bsides-swfl-2025
+   ```
 
 2. **Switch to the staging branch**
 
-    ```bash
-    git checkout staging
-    ```
+   ```bash
+   git checkout staging
+   ```
 
 3. **Open or edit `index.html`**
 
-    ```bash
-    code index.html
-    ```
+   ```bash
+   code index.html
+   ```
 
-    You can also use any editor of your choice.
+   You can also use any editor of your choice.
 
 ---
 
@@ -62,6 +69,7 @@ These rules ensure a safe, organized, and review-driven development process.
    Do not commit directly to `main`.
 
 2. **Suggested contributions:**
+
    - Layout and design updates (HTML/CSS/JS)
    - Components for speaker lists, schedules, forms, etc.
    - Branding updates (use the provided logo)
