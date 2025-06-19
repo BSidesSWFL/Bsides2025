@@ -3,37 +3,37 @@ import { Shield, Users, Zap, Award, Heart } from 'lucide-react';
 
 const SponsorsPage = () => {
   const platinumSponsors = [
-    { name: "Become A Sponsor", logo: "🛡️", website: "https://bsidesswfl.com" },
-    { name: "Your Name Here", logo: "🔐", website: "https://bsidesswfl.com" }
+    { name: "Become A Sponsor", logo: "🛡️", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🔐", website: "https://bsidesswfl.org" }
   ];
 
   const goldSponsors = [
-    { name: "Become A Sponsor", logo: "🎯", website: "https://bsidesswfl.com" },
-    { name: "Your Name Here", logo: "📊", website: "https://bsidesswfl.com" },
-    { name: "Your Logo Could Be Famous", logo: "☁️", website: "https://bsidesswfl.com" }
+    { name: "Become A Sponsor", logo: "🎯", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "📊", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "☁️", website: "https://bsidesswfl.org" }
   ];
 
   const silverSponsors = [
-    { name: "Become A Sponsor", logo: "⚡", website: "https://bsidesswfl.com" },
-    { name: "Your Name Here", logo: "🚨", website: "https://bsidesswfl.com" },
-    { name: "Your Logo Could Be Famous", logo: "🔍", website: "https://bsidesswfl.com" },
-    { name: "Swag Bag Royalty", logo: "🔬", website: "https://bsidesswfl.com" }
+    { name: "Become A Sponsor", logo: "⚡", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🚨", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "🔍", website: "https://bsidesswfl.org" },
+    { name: "Swag Bag Royalty", logo: "🔬", website: "https://bsidesswfl.org" }
   ];
 
   const bronzeSponsors = [
-    { name: "Become A Sponsor", logo: "🏢", website: "https://bsidesswfl.com" },
-    { name: "Your Name Here", logo: "🎓", website: "https://bsidesswfl.com" },
-    { name: "Your Logo Could Be Famous", logo: "🔧", website: "https://bsidesswfl.com" },
-    { name: "Let’s Make This Official", logo: "🦠", website: "https://bsidesswfl.com" },
-    { name: "Buy Us Coffee", logo: "🔑", website: "https://bsidesswfl.com" },
-    { name: "Sticker Worthy?", logo: "📋", website: "https://bsidesswfl.com" }
+    { name: "Become A Sponsor", logo: "🏢", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🎓", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "🔧", website: "https://bsidesswfl.org" },
+    { name: "Let's Make This Official", logo: "🦠", website: "https://bsidesswfl.org" },
+    { name: "Buy Us Coffee", logo: "🔑", website: "https://bsidesswfl.org" },
+    { name: "Sticker Worthy?", logo: "📋", website: "https://bsidesswfl.org" }
   ];
 
   const communitySponsors = [
-    { name: "Become A Community Sponsor", logo: "🏛️", website: "https://bsidesswfl.com" },
-    { name: "Your Name Here", logo: "🎓", website: "https://bsidesswfl.com" },
-    { name: "Your Logo Could Be Famous", logo: "🌐", website: "https://bsidesswfl.com" },
-    { name: "Let’s Make This Official", logo: "👥", website: "https://bsidesswfl.com" }
+    { name: "Become A Community Sponsor", logo: "🏛️", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🎓", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "🌐", website: "https://bsidesswfl.org" },
+    { name: "Let's Make This Official", logo: "👥", website: "https://bsidesswfl.org" }
   ];
 
   const SponsorCard = ({ sponsor, size = "medium" }) => {
