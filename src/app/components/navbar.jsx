@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Search, Menu, X } from "lucide-react"
+import { Search, Menu, X, ScrollIcon, Calendar, User2, Computer, Handshake, Ribbon, RibbonIcon } from "lucide-react"
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,45 +16,45 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-30">
           <Link href="/" className="flex items-center">
-            <div className="w-40 h-10 rounded-full bg-purple-700 flex items-center justify-center mr-3 opacity-80">
+            <div className="w-40 h-10 rounded-full bg-purple-700 flex items-center hover:scale-102 justify-center mr-3 opacity-80">
               <img src="bsideslogo.png" alt="bsides swfl logo" />
             </div>
           </Link>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Link href="/aboutus" className="light:text-black text-white hover:text-purple-700">
-              About Us
+            <Link href="/aboutus" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex"><ScrollIcon size={20} className="mr-2 blur-[0.75px]" />About Us</p>
             </Link>
 
-            <Link href="/schedule" className="light:text-black text-white hover:text-purple-700">
-              Schedule
+            <Link href="/events" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex"><Computer size={20} className="mr-2 blur-[0.75px]" />Events</p>
             </Link>
 
-            <Link href="/speakers" className="light:text-black text-white hover:text-purple-700">
-              Speakers
+            <Link href="/schedule" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex"><Calendar size={20} className="mr-2 blur-[0.75px]" />Schedule</p>
             </Link>
 
-            <Link href="/events" className="light:text-black text-white hover:text-purple-700">
-              Events
+            <Link href="/speakers" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex"><User2 size={20} className="mr-2 blur-[0.75px]" />Speakers</p>
             </Link>
 
-            <Link href="/workshops" className="light:text-black hidden text-white hover:text-purple-700">
-              Workshops
+            <Link href="/workshops" className="light:text-black hidden text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex">Workshops</p>
             </Link>
 
-            <Link href="/sponsors" className="light:text-black text-white hover:text-purple-700">
-              Sponsors
+            <Link href="/sponsors" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex"><Ribbon size={20} className="mr-2 blur-[0.75px]" />Sponsors</p>
             </Link>
 
-            <Link href="/volunteer" className="light:text-black text-white hover:text-purple-700">
-              Volunteer
+            <Link href="/volunteer" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex"><Handshake size={20} className="mr-2 blur-[0.75px]" />Volunteer</p>
             </Link>
 
-            <Link href="/tickets" className="light:text-black text-white hidden hover:text-purple-700">
-              Tickets
+            <Link href="/tickets" className="light:text-black text-orange-200 hidden hover:text-orange-300 hover:scale-105 italic">
+              <p className="ml-3 my-4 inline-flex">Tickets</p>
             </Link>
 
-            <button aria-label="Search" className="light:text-black text-white hover:text-purple-700">
+            <button aria-label="Search" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
               <Search size={20} />
             </button>
           </div>
@@ -76,38 +76,38 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white py-4 px-4 shadow-md">
-          <div className="flex flex-col space-y-4">
-            <Link href="/aboutus" className="text-gray-700 hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              About Us
+        <div className="md:hidden bg-black shadow-md">
+          <div className="flex flex-col space-y-4 bg-black">
+            <Link href="/aboutus" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 my-4 inline-flex"><ScrollIcon size={20} className="mr-3 blur-[0.75px]" /> About Us</p>
             </Link>
 
-            <Link href="/schedule" className="text-gray-700 hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Schedule
+            <Link href="/events" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"><Computer size={20} className="mr-3 blur-[0.75px]" /> Events</p>
             </Link>
 
-            <Link href="/speakers" className="text-gray-700 hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Speakers
+            <Link href="/schedule" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"><Calendar size={20} className="mr-3 blur-[0.75px]" /> Schedule</p>
             </Link>
 
-            <Link href="/events" className="text-gray-700 hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Events
+            <Link href="/speakers" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"><User2 size={20} className="mr-3 blur-[0.75px]" /> Speakers</p>
             </Link>
 
-            <Link href="/workshops" className="text-gray-700 hidden hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Workshops
+            <Link href="/workshops" className="text-orange-200 hidden hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"> Workshops</p>
             </Link>
 
-            <Link href="/sponsors" className="text-gray-700 hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Sponsors
+            <Link href="/sponsors" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"><Ribbon size={20} className="mr-3 blur-[0.75px]" /> Sponsors</p>
             </Link>
 
-            <Link href="/volunteer" className="text-gray-700 hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Volunteer
+            <Link href="/volunteer" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"><Handshake size={20} className="mr-3 blur-[0.75px]" /> Volunteer</p>
             </Link>
 
-            <Link href="/tickets" className="text-gray-700  hidden hover:text-purple-700 py-2" onClick={toggleMobileMenu}>
-              Tickets
+            <Link href="/tickets" className="text-orange-200  hidden hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
+              <p className="ml-5 mb-4 inline-flex"> Tickets</p>
             </Link>
           </div>
         </div>
