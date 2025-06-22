@@ -7,7 +7,7 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
       <div className="wrapper-7 h-[100vh] bg-blend-dark p-8 my-4 mx-auto md:max-w-lg md:w-1/2 md:h-[95vh] md:items-center md:flex-col items-center justify-center shadow-lg w-full relative overflow-scroll md:overflow-hidden">
         <button
           className="absolute top-5 right-10 text-cyan-600 hover:text-cyan-800 text-4xl z-50"
