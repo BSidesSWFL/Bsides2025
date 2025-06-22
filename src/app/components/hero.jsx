@@ -32,8 +32,6 @@ export default function Hero() {
               className="w-full h-auto lg:h-[30vh] shadow-lg hover:scale-102 mb-16 transition-transform duration-300"
             />
           </div>
-          <p className="text-md md:text-lg text-cyan-100">Join us for two days of insightful talks, hands-on workshops, and networking opportunities with cybersecurity professionals.</p>
-          <p className="text-md md:text-lg text-cyan-100 mt-4">Stay tuned for more details!</p>
         </div>
       </div>
     </div>

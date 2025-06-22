@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function InfoCards() {
   return (
-    <div className="container mx-auto px-4 py-16 wrapper-5">
+    <div className="container mx-auto px-4 py-12 wrapper-5 w-auto md:min-width-[1200px]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Sponsors Card */}
         <Card className="mb-8 opacity-77">

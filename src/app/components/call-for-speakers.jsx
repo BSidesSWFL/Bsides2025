@@ -8,15 +8,15 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-      <div className="wrapper h-auto bg-blend-dark p-8 my-4 mx-auto md:max-w-lg md:w-1/2 md:h-[95vh] md:items-center md:flex-col items-center justify-center shadow-lg w-full relative overflow-scroll md:overflow-hidden">
+      <div className="wrapper-7 h-[100vh] bg-blend-dark p-8 my-4 mx-auto md:max-w-lg md:w-1/2 md:h-[95vh] md:items-center md:flex-col items-center justify-center shadow-lg w-full relative overflow-scroll md:overflow-hidden">
         <button
-          className="absolute top-5 right-10 text-cyan-600 hover:text-cyan-800 text-4xl"
+          className="absolute top-5 right-10 text-cyan-600 hover:text-cyan-800 text-4xl z-50"
           onClick={onClose}
         >
           &times;
         </button>
         <div className="m-auto md:h-[78vh] flex flex-col md:flex-row md:items-center md:justify-between rounded-2xl">
-          <div className="bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 rounded-lg shadow-lg p-6 md:p-8 w-full max-w-2xl">
+          <div className="bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 rounded-lg shadow-lg p-6 md:p-8 w-auto max-w-2xl lg:ml-0 md:ml-8 opacity-82">
             <div className="flex justify-between mt-1 items-center mb-6">
               <h1 className="text-2xl font-semibold text-teal-700">Call for Speakers</h1>
               <span className="bg-green-100 text-teal-700 text-sm w-[35vw] md:w-auto mx-3 text-center font-medium p-1 rounded-full">
@@ -38,7 +38,7 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
             <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
               <div className="text-gray-600 text-sm mb-4 md:mb-0">
                 <p>Call closes in Eastern Daylight Time (UTC-04:00) timezone.</p>
-                <p>Closing time in your timezone (America/New_York) is <span className="font-semibold">30 Sep 2025 11:59 pm</span>.</p>
+                <p>Closing time in your timezone (America/New_York) is <br></br><span className="font-semibold">30 Sep 2025 11:59 pm</span>.</p>
               </div>
               <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-200 flex items-center justify-center md:justify-start">
                 <p className="text-sm"><Calendar className="mr-1 mb-1 inline-block" width={15} height={15} /> Add to calendar</p>
