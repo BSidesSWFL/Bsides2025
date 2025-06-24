@@ -1,72 +1,64 @@
-"use client";
+"use client"
 
 import { useState } from "react"
 import Link from "next/link"
-import { Search, Menu, X, ScrollIcon, Calendar, User2, Computer, Handshake, Ribbon, RibbonIcon } from "lucide-react"
+import Image from "next/image"
+import { Search, Menu, X, ScrollText, Calendar, User2, Computer, Handshake, Award } from "lucide-react"
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prevIsOpen) => !prevIsOpen);
-  };
+    setIsMobileMenuOpen((prevIsOpen) => !prevIsOpen)
+  }
 
   return (
-    <nav className="bg-black light:bg-white shadow-sm w-[auto]">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-30 mx-auto">
-          <Link href="/" className="flex items-center">
-            <div className="w-40 h-10 rounded-full bg-purple-700 flex items-center hover:scale-102 justify-center mr-3 opacity-80">
-              <img src="bsideslogo.png" alt="bsides swfl logo" />
+    <nav className="bg-gradient-to-r from-purple-900 via-purple-800 to-pink-800 backdrop-blur-lg border-b border-purple-500/20 shadow-2xl sticky top-0 z-50">
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo Section */}
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-48 h-12 bg-white/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg border border-white/20 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl group-hover:bg-white">
+              <Image
+                src="/bsideslogo.png"
+                alt="BSides SWFL Logo"
+                width={180}
+                height={40}
+                className="object-contain"
+                priority
+              />
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-6">
-            <Link href="/aboutus" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex"><ScrollIcon size={20} className="mr-2 blur-[0.75px]" />About Us</p>
-            </Link>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-1">
+            <NavLink href="/aboutus" icon={ScrollText} label="About Us" />
+            <NavLink href="/events" icon={Computer} label="Events" />
+            <NavLink href="/schedule" icon={Calendar} label="Schedule" />
+            <NavLink href="/speakers" icon={User2} label="Speakers" />
+            <NavLink href="/sponsors" icon={Award} label="Sponsors" />
+            <NavLink href="/volunteer" icon={Handshake} label="Volunteer" />
 
-            <Link href="/events" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex"><Computer size={20} className="mr-2 blur-[0.75px]" />Events</p>
-            </Link>
-
-            <Link href="/schedule" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex"><Calendar size={20} className="mr-2 blur-[0.75px]" />Schedule</p>
-            </Link>
-
-            <Link href="/speakers" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex"><User2 size={20} className="mr-2 blur-[0.75px]" />Speakers</p>
-            </Link>
-
-            <Link href="/workshops" className="light:text-black hidden text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex">Workshops</p>
-            </Link>
-
-            <Link href="/sponsors" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex"><Ribbon size={20} className="mr-2 blur-[0.75px]" />Sponsors</p>
-            </Link>
-
-            <Link href="/volunteer" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex"><Handshake size={20} className="mr-2 blur-[0.75px]" />Volunteer</p>
-            </Link>
-
-            <Link href="/tickets" className="light:text-black text-orange-200 hidden hover:text-orange-300 hover:scale-105 italic">
-              <p className="my-4 inline-flex">Tickets</p>
-            </Link>
-
-            <button aria-label="Search" className="light:text-black text-orange-200 hover:text-orange-300 hover:scale-105 italic">
+            <button
+              aria-label="Search"
+              className="p-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-200 hover:scale-105 backdrop-blur-sm border border-transparent hover:border-white/20"
+            >
               <Search size={20} />
             </button>
           </div>
 
-          <div className="flex md:hidden items-center">
-            <button aria-label="Search" className="text-gray-700 mr-4">
+          {/* Mobile Menu Controls */}
+          <div className="flex lg:hidden items-center space-x-3">
+            <button
+              aria-label="Search"
+              className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+            >
               <Search size={20} />
             </button>
 
             <button
               onClick={toggleMobileMenu}
-              className="text-gray-700"
+              className="p-2 text-white hover:bg-white/10 rounded-lg transition-all duration-200"
               aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,45 +67,48 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-black shadow-md">
-          <div className="flex flex-col space-y-4 bg-black">
-            <Link href="/aboutus" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 my-4 inline-flex"><ScrollIcon size={20} className="mr-3 blur-[0.75px]" /> About Us</p>
-            </Link>
-
-            <Link href="/events" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"><Computer size={20} className="mr-3 blur-[0.75px]" /> Events</p>
-            </Link>
-
-            <Link href="/schedule" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"><Calendar size={20} className="mr-3 blur-[0.75px]" /> Schedule</p>
-            </Link>
-
-            <Link href="/speakers" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"><User2 size={20} className="mr-3 blur-[0.75px]" /> Speakers</p>
-            </Link>
-
-            <Link href="/workshops" className="text-orange-200 hidden hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"> Workshops</p>
-            </Link>
-
-            <Link href="/sponsors" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"><Ribbon size={20} className="mr-3 blur-[0.75px]" /> Sponsors</p>
-            </Link>
-
-            <Link href="/volunteer" className="text-orange-200 hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"><Handshake size={20} className="mr-3 blur-[0.75px]" /> Volunteer</p>
-            </Link>
-
-            <Link href="/tickets" className="text-orange-200  hidden hover:text-orange-300 hover:scale-99 bg-black italic" onClick={toggleMobileMenu}>
-              <p className="ml-5 mb-4 inline-flex"> Tickets</p>
-            </Link>
+        <div className="lg:hidden bg-gradient-to-b from-purple-900/95 to-pink-900/95 backdrop-blur-xl border-t border-purple-500/20">
+          <div className="container mx-auto px-4 py-6 space-y-2">
+            <MobileNavLink href="/aboutus" icon={ScrollText} label="About Us" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/events" icon={Computer} label="Events" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/schedule" icon={Calendar} label="Schedule" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/speakers" icon={User2} label="Speakers" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/sponsors" icon={Award} label="Sponsors" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/volunteer" icon={Handshake} label="Volunteer" onClick={toggleMobileMenu} />
           </div>
         </div>
       )}
     </nav>
-  );
-};
+  )
+}
+
+// Desktop Navigation Link Component
+const NavLink = ({ href, icon: Icon, label }) => (
+  <Link
+    href={href}
+    className="group flex items-center px-4 py-2 text-white/90 hover:text-white font-medium transition-all duration-200 hover:bg-white/10 rounded-xl backdrop-blur-sm border border-transparent hover:border-white/20 hover:scale-105"
+  >
+    <Icon size={18} className="mr-2 opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
+    <span className="bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-yellow-100 transition-all duration-200">
+      {label}
+    </span>
+  </Link>
+)
+
+// Mobile Navigation Link Component
+const MobileNavLink = ({ href, icon: Icon, label, onClick }) => (
+  <Link
+    href={href}
+    onClick={onClick}
+    className="group flex items-center px-4 py-3 text-white/90 hover:text-white font-medium transition-all duration-200 hover:bg-white/10 rounded-xl backdrop-blur-sm border border-transparent hover:border-white/20"
+  >
+    <Icon size={20} className="mr-3 opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
+    <span className="bg-gradient-to-r from-orange-200 to-yellow-200 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-yellow-100 transition-all duration-200">
+      {label}
+    </span>
+  </Link>
+)
 
 export default Navbar
