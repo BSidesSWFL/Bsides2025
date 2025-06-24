@@ -10,13 +10,13 @@ const CallForSpeakersModal = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
       <div className="wrapper-7 h-[100vh] bg-blend-dark p-8 my-4 mx-auto md:max-w-lg md:w-1/2 md:h-[95vh] md:items-center md:flex-col items-center justify-center shadow-lg w-full relative overflow-scroll md:overflow-hidden">
         <button
-          className="absolute top-5 right-10 text-cyan-600 hover:text-cyan-800 text-4xl z-50"
+          className="absolute top-24 md:top-36 lg:top-14 right-10 md:right-12 text-cyan-600 hover:text-cyan-800 text-4xl lg:mt-24 z-50"
           onClick={onClose}
         >
           &times;
         </button>
         <div className="m-auto md:h-[78vh] flex flex-col md:flex-row md:items-center md:justify-between rounded-2xl">
-          <div className="mt-16 bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 rounded-lg shadow-lg p-6 md:p-8 w-auto max-w-2xl lg:ml-0 md:ml-8 opacity-82">
+          <div className="mt-16 md:mt-40 lg:mt-36 bg-gradient-to-br from-amber-100 via-orange-100 to-red-100 rounded-lg shadow-lg p-6 md:p-8 w-auto max-w-2xl mb-36 md:mb-12 lg:mb-16 lg:ml-0 opacity-82">
             <div className="flex justify-between mt-1 items-center mb-6">
               <h1 className="text-2xl font-semibold text-teal-700">Call for Speakers</h1>
               <span className="bg-green-100 text-teal-700 text-sm w-[35vw] md:w-auto mx-3 text-center font-medium p-1 rounded-full">
