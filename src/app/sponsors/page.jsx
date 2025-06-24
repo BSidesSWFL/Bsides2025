@@ -3,37 +3,37 @@ import { Shield, Users, Zap, Award, Heart } from 'lucide-react';
 
 const SponsorsPage = () => {
   const platinumSponsors = [
-    { name: "CyberDefense Corp", logo: "🛡️", website: "https://cyberdefense.com" },
-    { name: "SecureNet Solutions", logo: "🔐", website: "https://securenet.com" }
+    { name: "Become A Sponsor", logo: "🛡️", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🔐", website: "https://bsidesswfl.org" }
   ];
 
   const goldSponsors = [
-    { name: "ThreatHunter Pro", logo: "🎯", website: "https://threathunter.com" },
-    { name: "InfoSec Analytics", logo: "📊", website: "https://infosecanalytics.com" },
-    { name: "CloudGuard Systems", logo: "☁️", website: "https://cloudguard.com" }
+    { name: "Become A Sponsor", logo: "🎯", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "📊", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "☁️", website: "https://bsidesswfl.org" }
   ];
 
   const silverSponsors = [
-    { name: "Penetration Testing LLC", logo: "⚡", website: "https://pentest.com" },
-    { name: "Incident Response Team", logo: "🚨", website: "https://incidentresponse.com" },
-    { name: "Vulnerability Scanners Inc", logo: "🔍", website: "https://vulnscan.com" },
-    { name: "Digital Forensics Lab", logo: "🔬", website: "https://digitalforensics.com" }
+    { name: "Become A Sponsor", logo: "⚡", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🚨", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "🔍", website: "https://bsidesswfl.org" },
+    { name: "Swag Bag Royalty", logo: "🔬", website: "https://bsidesswfl.org" }
   ];
 
   const bronzeSponsors = [
-    { name: "Local Security Firm", logo: "🏢", website: "https://localsec.com" },
-    { name: "Cyber Training Academy", logo: "🎓", website: "https://cybertraining.com" },
-    { name: "Network Security Tools", logo: "🔧", website: "https://netsectools.com" },
-    { name: "Malware Analysis Group", logo: "🦠", website: "https://malwareanalysis.com" },
-    { name: "Encryption Specialists", logo: "🔑", website: "https://encryption.com" },
-    { name: "Compliance Consultants", logo: "📋", website: "https://compliance.com" }
+    { name: "Become A Sponsor", logo: "🏢", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🎓", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "🔧", website: "https://bsidesswfl.org" },
+    { name: "Let's Make This Official", logo: "🦠", website: "https://bsidesswfl.org" },
+    { name: "Buy Us Coffee", logo: "🔑", website: "https://bsidesswfl.org" },
+    { name: "Sticker Worthy?", logo: "📋", website: "https://bsidesswfl.org" }
   ];
 
   const communitySponsors = [
-    { name: "SWFL (ISC)² Chapter", logo: "🏛️", website: "https://swflisc2.org" },
-    { name: "FGCU Cybersecurity Program", logo: "🎓", website: "https://fgcu.edu/cyber" },
-    { name: "Naples OWASP Chapter", logo: "🌐", website: "https://owasp.org/naples" },
-    { name: "Fort Myers Tech Meetup", logo: "👥", website: "https://meetup.com/ftmyerstech" }
+    { name: "Become A Community Sponsor", logo: "🏛️", website: "https://bsidesswfl.org" },
+    { name: "Your Name Here", logo: "🎓", website: "https://bsidesswfl.org" },
+    { name: "Your Logo Could Be Famous", logo: "🌐", website: "https://bsidesswfl.org" },
+    { name: "Let's Make This Official", logo: "👥", website: "https://bsidesswfl.org" }
   ];
 
   const SponsorCard = ({ sponsor, size = "medium" }) => {
