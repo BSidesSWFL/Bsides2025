@@ -36,14 +36,6 @@ const SponsorsPage = () => {
     { name: "Let's Make This Official", logo: "👥", website: "https://bsidesswfl.org" }
   ];
 
-  const SponsorCard = ({ sponsor, size = "medium" }) => {
-    const sizeClasses = {
-      large: "p-8 text-6xl min-h-48",
-      medium: "p-6 text-4xl min-h-36",
-      small: "p-4 text-3xl min-h-28",
-      tiny: "p-3 text-2xl min-h-20"
-    };
-
     return (
       <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-orange-100 flex flex-col items-center justify-center text-center group ${sizeClasses[size]}`}>
         <div className="mb-3 group-hover:scale-110 transition-transform duration-300">
