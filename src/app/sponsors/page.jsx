@@ -95,7 +95,7 @@ const SponsorsPage = () => {
       <div className="wrapper-2 md:wrapper-6 pt-16 md:pt-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl font-semibold mb-6 text-orange-200">Our Amazing Sponsors</h2>
+          <h2 className="text-3xl font-semibold mt-8 md:mt-32 lg:mt-8 xl:mt-16 mb-6 text-orange-200">Our Amazing Sponsors</h2>
           <p className="text-xl text-cyan-100 max-w-3xl mx-auto leading-relaxed">
             Southwest Florida's greatest cybersecurity conference is made possible by our incredible sponsors.
             Join us in thanking these organizations that support our cybersecurity community.
