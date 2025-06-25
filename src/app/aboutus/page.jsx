@@ -47,11 +47,11 @@ export default function AboutUs() {
   ]
 
   return (
-    <div className="max-w-5xl mx-auto p-4 wrapper-8">
+    <div className="max-w-5xl mx-auto p-4 wrapper">
       <div className="items-center justify-center h-[100vh]">
-        <h1 className="text-4xl font-bold text-center text-teal-700">About Us</h1>
+        <h1 className="text-4xl font-bold mt-20 text-center text-teal-700">About Us</h1>
         <ul className="list-none">
-          <Accordion type="single" className="w-full mt-30 md:mt-[30%]" collapsible>
+          <Accordion type="single" className="w-full mt-16 md:mt-[30%] lg:mt-36 xl:mt-36" collapsible>
             {AboutUsData.map((item, index) => (
               <AccordionItem key={item.id} value={`item-${index + 1}`} className={`gap-4`}>
                 <AccordionTrigger>{item.title}</AccordionTrigger>
