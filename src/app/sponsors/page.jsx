@@ -36,28 +36,36 @@ const SponsorsPage = () => {
     { name: "Let's Make This Official", logo: "👥", website: "https://bsidesswfl.org" }
   ];
 
-    return (
-      <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-orange-100 flex flex-col items-center justify-center text-center group ${sizeClasses[size]}`}>
-        <div className="mb-3 group-hover:scale-110 transition-transform duration-300">
-          {sponsor.logo}
-        </div>
-        <h3 className={`font-bold text-teal-800 ${size === 'large' ? 'text-xl' : size === 'medium' ? 'text-lg' : size === 'small' ? 'text-base' : 'text-sm'}`}>
-          {sponsor.name}
-        </h3>
-        <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <a
-            href={sponsor.website}
-            className="text-orange-600 hover:text-orange-800 text-sm font-medium"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit Website →
-          </a>
-        </div>
-      </div>
-    );
+  // SponsorCard component
+  const sizeClasses = {
+    large: "w-80 h-56 p-8",
+    medium: "w-64 h-48 p-6",
+    small: "w-48 h-40 p-4",
+    tiny: "w-40 h-32 p-2"
   };
 
+  const SponsorCard = ({ sponsor, size }) => (
+    <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl mx-auto transition-all duration-300 transform hover:-translate-y-1 border border-orange-100 flex flex-col items-center justify-center text-center group ${sizeClasses[size]}`}>
+      <div className="mb-3 group-hover:scale-110 transition-transform duration-300">
+        {sponsor.logo}
+      </div>
+      <h3 className={`font-bold text-teal-800 ${size === 'large' ? 'text-xl' : size === 'medium' ? 'text-lg' : size === 'small' ? 'text-base' : 'text-sm'}`}>
+        {sponsor.name}
+      </h3>
+      <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <a
+          href={sponsor.website}
+          className="text-orange-600 hover:text-orange-800 text-sm font-medium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Website →
+        </a>
+      </div>
+    </div>
+  );
+
+  // SponsorTier component
   const SponsorTier = ({ title, sponsors, tierColor, icon: Icon, cardSize, description }) => (
     <div className="mb-16">
       <div className="text-center mb-8">
@@ -78,8 +86,6 @@ const SponsorsPage = () => {
       </div>
     </div>
   );
-
-
 
   return (
     <div className="min-h-screen wrapper-4">
@@ -167,7 +173,7 @@ const SponsorsPage = () => {
       </div>
 
       {/* Sponsors Section */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto items-center justify-center text-center px-6 py-16">
         <SponsorTier
           title="Platinum Sponsors"
           sponsors={platinumSponsors}
