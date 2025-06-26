@@ -37,8 +37,8 @@ export default function Volunteer() {
   return (
     <>
       <main className="max-w-5xl mx-auto p-4 wrapper">
-        <h1 className="text-3xl font-bold mb-4 mt-4 text-center text-teal-700">Volunteer</h1>
-        <form onSubmit={handleSubmit} className="max-w-md mt-6 mx-auto my-6 mb-26 md:mb-28">
+        <h1 className="text-3xl font-bold mb-4 mt-18 text-center text-teal-700">Volunteer</h1>
+        <form onSubmit={handleSubmit} className="max-w-md mt- mx-auto my-6 mb-36 md:mb-48">
           <div className="mb-4">
             <label htmlFor="fullName" className="block mb-1 font-semibold text-orange-200">
               Full Name <span className="text-red-500">*</span>
