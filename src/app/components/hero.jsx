@@ -29,7 +29,7 @@ export default function Hero() {
               alt="Map of the event location"
               width={700}
               height={300}
-              className="w-full h-auto lg:h-[30vh] shadow-lg hover:scale-102 mb-16 transition-transform duration-300"
+              className="w-full h-auto lg:h-[30vh] shadow-lg hover:scale-105 mb-16 transition-transform duration-875"
             />
           </div>
         </div>
