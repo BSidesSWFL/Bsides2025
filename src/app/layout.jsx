@@ -44,7 +44,6 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
-
       </body>
     </html>
   );
