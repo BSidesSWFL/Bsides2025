@@ -66,7 +66,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-gradient-to-b from-purple-900/95 to-pink-900/95 backdrop-blur-xl border-t border-purple-500/20">
