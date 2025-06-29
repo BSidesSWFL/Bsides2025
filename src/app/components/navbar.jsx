@@ -90,7 +90,7 @@ const NavLink = ({ href, icon: Icon, label }) => (
     className="group flex items-center px-4 py-2 text-white/90 hover:text-white font-medium transition-all duration-200 hover:bg-white/10 rounded-xl backdrop-blur-sm border border-transparent hover:border-white/20 hover:scale-105"
   >
     <Icon size={18} className="mr-2 opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
-    <span className="bg-gradient-to-r from-orange-200 to-yellow-200 dark:bg-gradient-to-r dark:from-orange-200 dark:to-yellow-200 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-yellow-100 transition-all duration-200">
+    <span className="bg-gradient-to-r from-orange-200 to-yellow-200 dark:bg-gradient-to-r dark:from-cyan-200 dark:to-cyan-400 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-yellow-100 transition-all duration-200">
       {label}
     </span>
   </Link>
@@ -104,7 +104,7 @@ const MobileNavLink = ({ href, icon: Icon, label, onClick }) => (
     className="group flex items-center px-4 py-3 text-white/90 hover:text-white font-medium transition-all duration-200 hover:bg-white/10 rounded-xl backdrop-blur-sm border border-transparent hover:border-white/20"
   >
     <Icon size={20} className="mr-3 opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
-    <span className="bg-gradient-to-r from-orange-200 to-yellow-200 dark:bg-gradient-to-r dark:from-orange-200 dark:to-yellow-200 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-yellow-100 transition-all duration-200">
+    <span className="bg-gradient-to-r from-orange-200 to-yellow-200 dark:bg-gradient-to-r dark:from-cyan-200 dark:to-cyan-400 bg-clip-text text-transparent group-hover:from-orange-100 group-hover:to-yellow-100 transition-all duration-200">
       {label}
     </span>
   </Link>
