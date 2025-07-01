@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Search, Menu, X, ScrollText, Calendar, User2, Computer, Handshake, Award } from "lucide-react"
+import { Search, Menu, X, ScrollText, Calendar, User2, Users, Computer, Handshake, Award } from "lucide-react"
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -33,29 +33,16 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             <NavLink href="/aboutus" icon={ScrollText} label="About Us" />
-            <NavLink href="/events" icon={Computer} label="Events" />
-            <NavLink href="/schedule" icon={Calendar} label="Schedule" />
-            <NavLink href="/speakers" icon={User2} label="Speakers" />
-            <NavLink href="/sponsors" icon={Award} label="Sponsors" />
             <NavLink href="/volunteer" icon={Handshake} label="Volunteer" />
-
-            <button
-              aria-label="Search"
-              className="p-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-200 hover:scale-105 backdrop-blur-sm border border-transparent hover:border-white/20"
-            >
-              <Search size={20} />
-            </button>
+            <NavLink href="/sponsors" icon={Award} label="Sponsors" />
+            <NavLink href="/speakers" icon={User2} label="Speakers" />
+            <NavLink href="/workshops" icon={Computer} label="Workshops" />
+            <NavLink href="/villages" icon={Users} label="Villages" />
+            <NavLink href="/schedule" icon={Calendar} label="Schedule" />
           </div>
 
           {/* Mobile Menu Controls */}
           <div className="flex lg:hidden items-center space-x-3">
-            <button
-              aria-label="Search"
-              className="p-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
-            >
-              <Search size={20} />
-            </button>
-
             <button
               onClick={toggleMobileMenu}
               className="p-2 text-white hover:bg-white/10 rounded-lg transition-all duration-200"
@@ -66,16 +53,18 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-gradient-to-b from-purple-900/95 to-pink-900/95 backdrop-blur-xl border-t border-purple-500/20">
           <div className="container mx-auto px-4 py-6 space-y-2">
             <MobileNavLink href="/aboutus" icon={ScrollText} label="About Us" onClick={toggleMobileMenu} />
-            <MobileNavLink href="/events" icon={Computer} label="Events" onClick={toggleMobileMenu} />
-            <MobileNavLink href="/schedule" icon={Calendar} label="Schedule" onClick={toggleMobileMenu} />
-            <MobileNavLink href="/speakers" icon={User2} label="Speakers" onClick={toggleMobileMenu} />
-            <MobileNavLink href="/sponsors" icon={Award} label="Sponsors" onClick={toggleMobileMenu} />
             <MobileNavLink href="/volunteer" icon={Handshake} label="Volunteer" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/sponsors" icon={Award} label="Sponsors" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/speakers" icon={User2} label="Speakers" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/workshops" icon={Computer} label="Workshops" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/villages" icon={Users} label="Villages" onClick={toggleMobileMenu} />
+            <MobileNavLink href="/schedule" icon={Calendar} label="Schedule" onClick={toggleMobileMenu} />
           </div>
         </div>
       )}
