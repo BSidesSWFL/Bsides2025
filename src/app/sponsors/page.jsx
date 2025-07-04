@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Users, Zap, Award, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 const SponsorsPage = () => {
   const platinumSponsors = [
@@ -229,9 +230,11 @@ const SponsorsPage = () => {
             Join our community of security leaders and help support Southwest Florida's premier cybersecurity conference.
           </p>
           <div className="flex flex-col mb-16 sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg">
-              Download Sponsorship Package
-            </button>
+            <Link href="/sponsor-form" className='w-full sm:w-auto'>
+              <button className="bg-gradient-to-r from-cyan-500 to-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg cursor-pointer hover:bg-gradient-to-bl hover:from-cyan-600 hover:to-teal-700">
+                <p className='inline-block'>Sign-Up Here</p> <img className="inline-block w-12 h-12 ml-4" src="bsideslogo.png" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
